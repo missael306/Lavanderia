@@ -15,9 +15,7 @@ class CreateRecoleccionDetalleTable extends Migration
     {
         Schema::create('recoleccion_detalle', function (Blueprint $table) {
             $table->bigIncrements('idRecoleccionDetalle');
-            $table->float('precio');
-            $table->unsignedBigInteger('idCatArticulo');
-            $table->foreign('idCatArticulo')->references('idCatArticulo')->on('cat_articulos'); 
+            $table->float('precio');            
             $table->unsignedBigInteger('idRecoleccion');
             $table->foreign('idRecoleccion')->references('idRecoleccion')->on('recoleccion'); 
             $table->timestamps();

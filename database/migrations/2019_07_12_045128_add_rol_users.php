@@ -14,8 +14,8 @@ class AddRolUsers extends Migration
     public function up()
     {
         Schema::table('users',function(Blueprint $table){
-            $table->unsignedBigInteger('idCatRol')->default(1);
-            $table->foreign('idCatRol')->references('idCatRol')->on('cat_rol');
+            $table->unsignedBigInteger('id_cat_rol')->default(1);
+            $table->foreign('id_cat_rol')->references('id_cat_rol')->on('cat_rol');
         });
     }
 
@@ -27,7 +27,7 @@ class AddRolUsers extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropForeign('users_idCatRol_foreign');
+            $table->dropForeign('users_id_cat_rol_foreign');
         });
     }
 }

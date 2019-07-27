@@ -14,16 +14,16 @@ class CreateRecoleccionTable extends Migration
     public function up()
     {
         Schema::create('recoleccion', function (Blueprint $table) {
-            $table->bigIncrements('idRecoleccion');
+            $table->bigIncrements('id_recoleccion');
             $table->string('folio',150);
-            $table->dateTime('fechaRecoleccion');
-            $table->dateTime('fechaEntrega')->nullable();
-            $table->unsignedBigInteger('idPuntoRecoleccion');
-            $table->foreign('idPuntoRecoleccion')->references('idPuntoRecoleccion')->on('puntos_recoleccion'); 
-            $table->unsignedBigInteger('idCatTipoRecoleccion');
-            $table->foreign('idCatTipoRecoleccion')->references('idCatTipoRecoleccion')->on('cat_tipo_recoleccion'); 
-            $table->unsignedBigInteger('idCatEstatusRecoleccion');
-            $table->foreign('idCatEstatusRecoleccion')->references('idCatEstatusRecoleccion')->on('cat_estatus_recoleccion'); 
+            $table->dateTime('fecha_recoleccion');
+            $table->dateTime('fecha_entrega')->nullable();
+            $table->unsignedBigInteger('id_punto_recoleccion');
+            $table->foreign('id_punto_recoleccion')->references('id_punto_recoleccion')->on('puntos_recoleccion'); 
+            $table->unsignedBigInteger('id_cat_tipo_recoleccion');
+            $table->foreign('id_cat_tipo_recoleccion')->references('id_cat_tipo_recoleccion')->on('cat_tipo_recoleccion'); 
+            $table->unsignedBigInteger('id_cat_estatus_recoleccion');
+            $table->foreign('id_cat_estatus_recoleccion')->references('id_cat_estatus_recoleccion')->on('cat_estatus_recoleccion'); 
             $table->timestamps();
         });
     }

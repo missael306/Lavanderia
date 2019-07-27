@@ -14,7 +14,7 @@ class CreateCatArticulosTable extends Migration
     public function up()
     {
         Schema::create('cat_articulos', function (Blueprint $table) {
-            $table->bigIncrements('idCatArticulo');
+            $table->bigIncrements('id_cat_articulo');
             $table->string('articulo',150);
             $table->float('precio');
             $table->timestamps();

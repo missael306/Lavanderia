@@ -14,7 +14,7 @@ class CreateCatEstatusRecoleccionTable extends Migration
     public function up()
     {
         Schema::create('cat_estatus_recoleccion', function (Blueprint $table) {
-            $table->bigIncrements('idCatEstatusRecoleccion');
+            $table->bigIncrements('id_cat_estatus_recoleccion');
             $table->string('estatus',50);
             $table->timestamps();
         });

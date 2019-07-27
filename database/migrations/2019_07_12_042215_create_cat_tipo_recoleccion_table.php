@@ -14,8 +14,8 @@ class CreateCatTipoRecoleccionTable extends Migration
     public function up()
     {
         Schema::create('cat_tipo_recoleccion', function (Blueprint $table) {
-            $table->bigIncrements('idCatTipoRecoleccion');
-            $table->string('tipoRecoleccion',150);
+            $table->bigIncrements('id_cat_tipo_recoleccion');
+            $table->string('tipo_recoleccion',150);
             $table->timestamps();
         });
     }

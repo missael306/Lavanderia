@@ -14,14 +14,14 @@ class CreatePuntosRecoleccionTable extends Migration
     public function up()
     {
         Schema::create('puntos_recoleccion', function (Blueprint $table) {
-            $table->bigIncrements('idPuntoRecoleccion');
+            $table->bigIncrements('id_punto_recoleccion');
             $table->string('calle',50);
-            $table->string('codigoPostal',50);
-            $table->string('numeroExterior',50);
-            $table->string('numeroInterior',50)->nullable();
+            $table->string('codigo_postal',50);
+            $table->string('numero_exterior',50);
+            $table->string('numero_interior',50)->nullable();
             $table->string('referencia',250);
-            $table->unsignedBigInteger('idUsuario');
-            $table->foreign('idUsuario')->references('id')->on('users'); 
+            $table->unsignedBigInteger('id_user');
+            $table->foreign('id_user')->references('id_user')->on('users'); 
             $table->timestamps();
         });
     }

@@ -14,7 +14,7 @@ class CreateCatRolTable extends Migration
     public function up()
     {
         Schema::create('cat_rol', function (Blueprint $table) {
-            $table->bigIncrements('idCatRol');
+            $table->bigIncrements('id_cat_rol');
             $table->string('rol',50);
             $table->timestamps();
         });

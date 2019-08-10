@@ -2174,6 +2174,7 @@ iframe {
 .slider_two_area #main_slider_ten {
   background: url(../img/home-slider/slider-bg-10.png) no-repeat scroll center center;
   background-size: cover;
+  height: 720px !important;
 }
 
 /* End Main slider Area css
